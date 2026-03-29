@@ -7,17 +7,17 @@ AI-Based Habit Risk Predictor using Logistic Regression
 The digital age has brought about new research methods which show that both sleep patterns and screen time usage combine with study habits to determine student academic results. The project identifies multiple student performance indicators which will help create a system that predicts student performance outcomes.
 
 3. Objective
-The main objectives of this project are to develop a predictive model using student habit data To classify performance risk as high or low To apply concepts of Supervised Learning
+The main objectives of this project are to develop a predictive model using student habit data to classify performance risk as high or low To apply concepts of Supervised Learning
 
-4. Methodologs
+4. Methodologies 
 4.1 Data Collection the program generates a dummy data set which contains Sleep hours Study hours Screen time Performance risk 
-4.2 Data Preprocessing The data exists in a tabular format which uses a DataFrame structure The data consists of three features which include Sleep Study Screen Time The performance risk serves as the target variable for this study 
-4.3 Model UsedLogistic Regression functions as the classification algorithm for this project because it processes binary classification problems through its design The algorithm performs efficiently to solve classification tasks. 
+4.2 Data Preprocessing the data exists in a tabular format which uses a Data Frame structure The data consists of three features which include Sleep Study Screen Time The performance risk serves as the target variable for this study 
+4.3 Model Used Logistic Regression functions as the classification algorithm for this project because it processes binary classification problems through its design The algorithm performs efficiently to solve classification tasks. 
 4.4 Training Process the data set contains two parts which include training data and test data that exist in a 70:30 distribution. The model training process uses the training data set. The model generates predictions based on the data from new users. 
 
 5. Implementation Programming Language Python Libraries Pandas Scikit-learn Interface Command Line Interface CLI
 
-6. Results The model predicts student risk levels by assessing their High Risk Low Risk based on their habits.The system provides habit improvement recommendations when it detects high risk. 
+6. Results The model predicts student risk levels by assessing their High-Risk Low Risk based on their habits. The system provides habit improvement recommendations when it detects high risk. 
 
 7. Applications Student self-evaluation tools Student academic performance monitoring systems 
 
@@ -25,4 +25,4 @@ The main objectives of this project are to develop a predictive model using stud
 
 9 Future scope the model could be improved using real data to make it more accurate. The system should include additional measurement metrics which include accuracy and precision and recall. The system has potential to become a web-based application or a mobile application.
 
-10 Conclusion The project demonstrates machine learning applications which analyze student habits to predict their academic risk. The study demonstrates that lifestyle habit imbalances have negative effects, while machine learning can be used to create better solutions.
+10 Conclusion The project demonstrates machine learning applications which analyse student habits to predict their academic risk. The study demonstrates that lifestyle habit imbalances have negative effects, while machine learning can be used to create better solutions.
