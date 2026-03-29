@@ -1,0 +1,52 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+
+def train_model():
+    # Dummy data for demonstration
+    data = {
+        'sleep': [8, 7, 6, 9, 5, 7, 8, 6, 7, 5],
+        'study': [3, 4, 2, 5, 1, 3, 4, 2, 3, 1],
+        'screen': [2, 3, 5, 1, 6, 4, 2, 5, 3, 7],
+        'performance_risk': [0, 0, 1, 0, 1, 0, 0, 1, 0, 1] # 0 = low risk, 1 = high risk
+    }
+    df = pd.DataFrame(data)
+
+    X = df[['sleep', 'study', 'screen']]
+    y = df['performance_risk']
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+    model = LogisticRegression()
+    model.fit(X_train, y_train)
+    return model
+
+def predict_risk(model, sleep, study, screen):
+    # Predict risk for new input
+    new_data = pd.DataFrame([[sleep, study, screen]], columns=['sleep', 'study', 'screen'])
+    prediction = model.predict(new_data)
+    return prediction[0]
+
+
+def main():
+    print("=== AI HABIT RISK PREDICTOR ===\n")
+
+    sleep = float(input("Hours of sleep: "))
+    study = float(input("Hours of study: "))
+    screen = float(input("Screen time hours: "))
+
+    model = train_model()
+    result = predict_risk(model, sleep, study, screen)
+
+    print("\n--- RESULT ---")
+    if result == 1:
+        print("⚠️ High Risk of Poor Performance")
+        print("Suggestions:")
+        print("- Increase study time")
+        print("- Reduce screen time")
+        print("- Improve sleep schedule")
+    else:
+        print("✅ Low Risk - You're on track!")
+
+if __name__ == "__main__":
+    main()
